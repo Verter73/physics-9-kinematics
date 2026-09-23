@@ -36,8 +36,8 @@
       const w = config.w ?? 520;
       const h = config.h ?? 320;
       const L = 56;
-      const R = 28;
-      const T = 30;
+      const R = 64;
+      const T = 42;
       const B = 46;
       const viewBox = `0 0 ${L+w+R} ${T+h+B}`;
 
@@ -261,7 +261,7 @@
     try {
       const w = config.w ?? 520;
       const L = 30;
-      const R = 40;
+      const R = 84;
       const T = 18;
       const n = config.arrows.length;
       const H = T + 22 + n * 44 + 10 + 44;
@@ -303,7 +303,7 @@
       }
 
       // Axis name
-      txt(svg, sx(config.max) + 22, axisY + 38, config.label, "g-text", "end", null);
+      txt(svg, sx(config.max) + 30, axisY, config.label, "g-text", "start", "middle");
 
       // Arrows
       for (let i = 0; i < n; i++) {
