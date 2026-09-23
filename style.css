@@ -90,8 +90,10 @@ a {
   border-radius: 4px;
 }
 
-p, li, dd {
-  max-width: 92ch;
+p, li, dd, figcaption, .cards .d, .trap, .note, .answer, .rule {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 i.v {
@@ -371,7 +373,6 @@ details.check[open] summary {
 
 figure.fig {
   margin: 1.4em 0;
-  max-width: 820px;
 }
 
 .graph {
@@ -385,6 +386,8 @@ figure.fig {
 .graph svg {
   display: block;
   width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
   height: auto;
   min-width: 300px;
 }
