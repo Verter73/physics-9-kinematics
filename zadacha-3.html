@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Задача 3. Самолёт разгоняется</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="graph.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="home" href="index.html">Кинематика · 9 класс</a>
+    <nav class="tasks" aria-label="Разделы">
+<a class="theory" href="teoriya.html">Теория</a>
+      <a href="zadacha-1.html" title="Задача 1">1</a>
+      <a href="zadacha-2.html" title="Задача 2">2</a>
+      <a href="zadacha-3.html" aria-current="page" title="Задача 3">3</a>
+      <a href="zadacha-4.html" title="Задача 4">4</a>
+      <a href="zadacha-5.html" title="Задача 5">5</a>
+      <a href="zadacha-6.html" title="Задача 6">6</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1><span class="num">Задача 3</span>Самолёт разгоняется: находим ускорение</h1>
+
+    <div class="cond">
+      <div class="label">Условие</div>
+      <p>Самолёт, разгоняясь перед взлётом, в течение некоторого промежутка времени двигался равноускоренно. Каково было при этом ускорение самолёта, если за 30 с его скорость возросла от 10 до 55 м/с?</p>
+    </div>
+
+    <h2>Что нужно знать</h2>
+    <div class="rule">
+      <div class="formula"><i class="v">a</i> = <span class="frac"><span><i class="v">v</i> − <i class="v">v₀</i></span><span><i class="v">t</i></span></span> = <span class="frac"><span>Δ<i class="v">v</i></span><span><i class="v">t</i></span></span></div>
+      <p class="legend">Самолёт разгоняется по прямой и не разворачивается. Направим ось <i class="v">X</i> по его движению — тогда проекции векторов скорости и ускорения на эту ось положительны и равны их модулям, поэтому маленькую ₓ внизу можно не писать. Здесь <i class="v">a</i> — модуль ускорения (м/с²), <i class="v">v₀</i> — модуль начальной скорости, какой она была в начале (м/с), <i class="v">v</i> — модуль конечной скорости, какой она стала (м/с), <i class="v">t</i> — время в секундах, за которое скорость изменилась.</p>
+      <p>Значок Δ — греческая буква «дельта», в физике она значит «изменение». Δ<i class="v">v</i> = <i class="v">v</i> − <i class="v">v₀</i> — на сколько изменилась скорость: из «стало» вычесть «было». При разгоне Δ<i class="v">v</i> положительное (скорость выросла), при торможении — отрицательное.</p>
+    </div>
+    <p>При разгоне вектор ускорения направлен туда же, куда вектор скорости, — по оси <i class="v">X</i>. Поэтому проекция ускорения получается положительной.</p>
+
+    <h2>Картинка</h2>
+    <figure class="fig">
+      <div class="graph" data-graph='{"title":"График скорости самолёта: от 10 до 55 м/с за 30 секунд","w":480,"h":300,"x":{"min":0,"max":35,"step":5,"label":"t, с"},"y":{"min":0,"max":60,"step":10,"label":"v, м/с"},"tris":[{"x1":0,"y1":10,"x2":30,"y2":55,"c":"muted","dt":"Δt = 30 с","dv":"Δv = 45 м/с"}],"lines":[{"pts":[[0,10],[30,55]],"c":"blue","label":"самолёт","at":[12,38]}],"dots":[{"x":0,"y":10,"c":"blue","label":"v₀ = 10 м/с","dx":10,"dy":-12},{"x":30,"y":55,"c":"blue","label":"v = 55 м/с","dx":-96,"dy":-12}]}'></div>
+      <figcaption>Самолёт начинает не с нуля, а с 10 м/с. За 30 с скорость выросла на 55 − 10 = 45 м/с. В пунктирном треугольнике: Δt = 30 с — сколько прошло времени, Δv = 45 м/с — на сколько изменилась скорость.</figcaption>
+    </figure>
+
+    <h2>Дано</h2>
+    <div class="dano">
+      <div class="left">
+        <div><i class="v">v₀</i> = 10 м/с</div>
+        <div><i class="v">v</i> = 55 м/с</div>
+        <div><i class="v">t</i> = 30 с</div>
+        <div class="find">Найти: <i class="v">a</i></div>
+      </div>
+      <div class="right"><i class="v">v₀</i> — начальная скорость, <i class="v">v</i> — конечная скорость, <i class="v">t</i> — время разгона, <i class="v">a</i> — искомое ускорение. Все величины уже в СИ.</div>
+    </div>
+
+    <h2>Решение по шагам</h2>
+    <ol class="steps">
+      <li><b>Находим изменение скорости:</b> <div class="formula">Δ<i class="v">v</i> = 55 м/с − 10 м/с = 45 м/с</div></li>
+      <li><b>Делим на время:</b> <div class="formula"><i class="v">a</i> = <span class="frac"><span>45 м/с</span><span>30 с</span></span> = 1,5 м/с²</div></li>
+      <li><b>Понимаем смысл:</b> каждую секунду скорость самолёта растёт на 1,5 м/с.</li>
+      <li><b>Проверяем:</b> 10 + 1,5·30 = 10 + 45 = 55 м/с ✓ — ровно то, что дано в условии.</li>
+    </ol>
+
+    <div class="trap">
+      <b class="tag">Ловушка.</b> Нельзя делить 55 на 30. Ускорение — это <b>изменение</b> скорости за секунду, а самолёт начинал не с места, а с 10 м/с. Сначала вычитаем «было» из «стало», потом делим.
+    </div>
+
+    <div class="answer">
+      <b class="tag">Ответ:</b> <i class="v">a</i> = 1,5 м/с².
+    </div>
+
+    <details class="check">
+      <summary>Проверь себя: автомобиль за 10 с разогнался с 5 до 25 м/с. С каким ускорением он двигался?</summary>
+      <p>Δ<i class="v">v</i> = 25 − 5 = 20 м/с, <i class="v">a</i> = 20 : 10 = 2 м/с².</p>
+    </details>
+  </main>
+
+  <footer class="pager">
+    <a href="zadacha-2.html">← Задача 2</a>
+    <a href="zadacha-4.html">Задача 4 →</a>
+  </footer>
+</div>
+</body>
+</html>
