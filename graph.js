@@ -121,7 +121,9 @@
           y2: axisY + 4,
           class: "g-axis"
         }, axisGroup);
-        txt(axisGroup, sx(tick.v), axisY + 20, tick.t, "g-text", "middle");
+        // «0» при отрицательных y: вертикальная ось идёт через середину подписи — сдвигаем влево
+        const zeroLeft = tick.v === 0 && config.y.min < 0;
+        txt(axisGroup, zeroLeft ? sx(0) - 6 : sx(tick.v), axisY + 24, tick.t, "g-text", zeroLeft ? "end" : "middle");
       }
 
       // Y ticks
